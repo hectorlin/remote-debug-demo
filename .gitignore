@@ -5,6 +5,13 @@ main
 *.out
 *.exe
 
+# CMake build directory
+build/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+
 # Debug files
 *.dSYM/
 *.su

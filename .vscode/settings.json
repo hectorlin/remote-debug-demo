@@ -16,7 +16,8 @@
         "*.hpp": "cpp",
         "*.h": "cpp",
         "*.c": "c",
-        "Makefile": "makefile"
+        "Makefile": "makefile",
+        "build.sh": "shellscript"
     },
     // Terminal settings
     "terminal.integrated.defaultProfile.linux": "bash",

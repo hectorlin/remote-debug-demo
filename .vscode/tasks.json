@@ -4,11 +4,14 @@
         {
             "label": "build-debug",
             "type": "shell",
-            "command": "make",
+            "command": "./build.sh",
             "args": [
                 "debug"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "presentation": {
                 "echo": true,
                 "reveal": "always",
@@ -20,12 +23,12 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Build debug version with symbols"
+            "detail": "Build debug version with symbols using build.sh"
         },
         {
             "label": "build-release",
             "type": "shell",
-            "command": "make",
+            "command": "./build.sh",
             "args": [
                 "release"
             ],
@@ -41,12 +44,12 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Build optimized release version"
+            "detail": "Build optimized release version using build.sh"
         },
         {
             "label": "run",
             "type": "shell",
-            "command": "make",
+            "command": "./build.sh",
             "args": [
                 "run"
             ],
@@ -59,12 +62,12 @@
                 "showReuseMessage": true,
                 "clear": false
             },
-            "detail": "Build and run the program"
+            "detail": "Build and run the program using build.sh"
         },
         {
             "label": "clean",
             "type": "shell",
-            "command": "make",
+            "command": "./build.sh",
             "args": [
                 "clean"
             ],
@@ -77,7 +80,7 @@
                 "showReuseMessage": true,
                 "clear": false
             },
-            "detail": "Clean build artifacts"
+            "detail": "Clean build artifacts using build.sh"
         },
         {
             "label": "start-gdbserver",
@@ -118,6 +121,24 @@
             },
             "detail": "Start gdbserver on port 1235",
             "dependsOn": "build-debug"
+        },
+        {
+            "label": "remote-setup",
+            "type": "shell",
+            "command": "./build.sh",
+            "args": [
+                "remote"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "detail": "Setup remote debugging instructions using build.sh"
         },
         {
             "type": "cppbuild",

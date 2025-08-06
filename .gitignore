@@ -11,12 +11,12 @@ main
 *.idb
 *.pdb
 
-# IDE files
-.vscode/settings.json
-.vscode/launch.json
-.vscode/tasks.json
-.vscode/c_cpp_properties.json
-.vscode/extensions.json
+# IDE files (keeping .vscode for remote debugging setup)
+# .vscode/settings.json
+# .vscode/launch.json
+# .vscode/tasks.json
+# .vscode/c_cpp_properties.json
+# .vscode/extensions.json
 
 # OS generated files
 .DS_Store
